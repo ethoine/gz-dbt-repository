@@ -1,5 +1,5 @@
 -- models/mart/finance_days.sql
-
+{{ config(materialized='table') }}
 SELECT 
     date_date,
     COUNT(orders_id) AS nb_transactions,
