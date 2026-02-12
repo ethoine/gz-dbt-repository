@@ -1,16 +1,13 @@
  # schema.yml
 
- version: 2
+version: 2
 
- sources:
+sources:
    - name: raw
      database: le-wagon-data-analytics-485823
      schema: gz_raw_data
      loader: bigquery
      description: gz sales, product and ship
-     freshness:
-        warn_after: {count: 12, period: hours}
-        error_after: {count: 24, period: hours}
      tables:
        - name: sales
          identifier: raw_gz_sales
